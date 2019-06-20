@@ -1,0 +1,10 @@
+theme: "just-the-docs"
+
+title: TEASPN
+description: A Jekyll theme for documentation
+
+search_enabled: true
+
+aux_links:
+  "See TEASPN on GitHub":
+    - "//github.com/teaspn/teaspn"
