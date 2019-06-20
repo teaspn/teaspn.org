@@ -1,7 +1,8 @@
 remote_theme: pmarsceill/just-the-docs
 
 title: TEASPN
-description: A Jekyll theme for documentation
+description: TEASPN — Framework and Protocol for Integrated Writing Assistance Environments
+url: "https://www.teaspn.org" 
 
 search_enabled: true
 
@@ -11,3 +12,4 @@ aux_links:
 
 plugins:
   - jekyll-remote-theme
+  - jekyll-seo-tag
