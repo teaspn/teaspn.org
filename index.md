@@ -45,7 +45,7 @@ We provide the TEASPN SDK.
 
 ## About the project
 
-The TEASPN project is led by [Masato Hagiwara](http://masatohagiwara.net/) (Octanove Labs, RIKEN AIP), [Takumi Ito](#) and [Tatsuki Kuribayashi](#) (Langsmith Inc., Tohoku University).
+The TEASPN project is led by [Masato Hagiwara](http://masatohagiwara.net/) (Octanove Labs, RIKEN AIP), [Takumi Ito](#) and [Tatsuki Kuribayashi](https://kuribayashi4.github.io/) (Langsmith Inc., Tohoku University).
 
 ## License
 
