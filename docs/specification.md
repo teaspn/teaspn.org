@@ -4,6 +4,7 @@ title: Specification
 nav_order: 2
 description: "TEASPN: Framework and Protocol for Integrated Writing Assistance Environments"
 permalink: /specification
+image: logo.png
 ---
 
 # Specification
@@ -33,13 +34,26 @@ For this reason, TEASPN supports syntax highlighting on the server side. The syn
 
 ```typescript
 interface SyntaxHighlightParams {
-	textDocument: TextDocumentIdentifier    // text document to highlight
+	/**
+	 * Text document to highlight
+	 **/
+	textDocument: TextDocumentIdentifier
 }
 
 interface SyntaxHighlight {
-	range: Range                // range to highlight
-	type: string                // one of ["red", "blue"]
-	hoverMessage?: string       // message to show when hovered
+	/**
+	 * Range to highlight
+	 **/
+	range: Range
+	/**
+	 * Type of highlight. Currently, 'blue', 'red', 'coral', 'cyan', 'green', 'salmon',
+	 * 'seagreen', 'yellow', 'orange', 'gold', 'lime', 'skyblue' are defined
+	 **/
+	type: string
+	/**
+	 * Message to show when hovered
+	 */
+	hoverMessage?: string
 }
 ```
 
@@ -51,24 +65,94 @@ In order to push the result of typological/grammatical analysis, use the `textDo
 
 ## Grammatical Error Correction
 
-TODO
+Correction of typological/grammatical errors published by the notification mentioned above can be done through the [`textDocument/codeAction`](https://microsoft.github.io/language-server-protocol/specification#textDocument_codeAction) request. When the code action request is issued from the client with regard to a diagnostic (an error detected above), the request parameter contains the relevant diagnostic in the `context` field (of type `CodeActionContext`). A TEASPN server can respond by creating a list of possible `CodeAction`s corresponding to the diagnostic, which are then presented to the user on the client side.
+
+Once the user chooses an action, another request `workspace/executeCommand` is issued from the client. The content of the command is exactly what the `CodeAction` created above contains as the `command` field. The current TEASPN protocol uses the following command for resolving diagnostics:
+
+```typescript
+interface Command {
+	/**
+	 * Human-readable name of the command, e.g., "Quick fix: typo"
+	 */
+	title: string;
+	/**
+	 * The identifier of the command. This needs to be "refactor.rewrite"
+	 */
+	command: string;
+	/**
+	 * Arguments that the command handler should be
+	 * invoked with. For "refactor.rewrite", this is a single-element array
+	 * which contains WorkspaceEdit.
+	 */
+	arguments?: any[];
+}
+
+```
+
+Upon receiving the `workspace/executeCommand`, the server issues a `workspace/applyEdit` request to make the actual edit to the documents.
 
 ## Completion
 
-TODO
+Completion (or suggestion) is handled by the [`textDocument/completion`](https://microsoft.github.io/language-server-protocol/specification#textDocument_completion) request. When completion is invoked on the client side (either manually or automatically), the request is sent to the server with the current cursor `Position`. The server needs to reconstruct the context of completion (for example by extracting the partial word at the cursor) and returns a `CompletionList`, which is a list of `CompletionItem`s.
 
 ## Text Rewriting
 
-TODO
+Text rewriting is a general framework where the TEASPN server receives a range in the document and returns another text. The potential uses include, but not limited to:
+
+* Paraphrasing
+* Translation
+* Summarization
+* Search
+
+As with grammatical error correction, text rewriting is handled through the [`textDocument/codeAction`](https://microsoft.github.io/language-server-protocol/specification#textDocument_codeAction) request. The request is sent from the client to the server but *without* the `context` information. The server executes whatever text rewriting operations it wishes and returns a list of `CodeAction`s to the client. The rest of the process is similar to that of grammatical error correction.
 
 ## Example Search
 
-TODO
+Writers often search certain words and phrases on dictionaries and search engines to look for better expressions or definitions. The TEASPN protocol has built-in support for full text search of outside resources. To run search, the client issues a `workspace/searchExample` request, as defined below:
+
+*Request*:
+
+* method: `workspace/searchExample`
+* params: `WorkspaceSearchExampleParams` as defined below:
+
+```typescript
+interface WorkspaceSearchExampleParams {
+	/**
+	 * Query string to search with
+	 **/
+	query: string;
+}
+```
+
+*Response*:
+
+* result: `ExampleInformation[]` as defined below:
+
+```typescript
+interface ExampleInformation {
+	/**
+     * Label of the example. This is usually the main text of a search result item
+	 **/
+	label: string;
+	/**
+	 * Description of the example. This is used as supplementary information (e.g., translation)
+	 */
+	description: string;
+}
+```
 
 ## Reference Jump
 
-TODO
+Major IDEs for programming provides the "go to definition" feature where you can jump to the definition by clicking an identifier (such as variables or functions).
+
+Similarly, TEASPN provides the reference jump feature where certain words can be "linked" to other locations in the document. This can be used for cases like:
+
+* Jumping to the referent from a pronoun
+* Jumping to the first mention given a proper noun
+* Jumping to the definition given an acronym
+
+For this, we re-purpose the [`textDocument/definition`](https://microsoft.github.io/language-server-protocol/specification#textDocument_definition) request from LSP, which returns a list of `Location`s given a `Position` in the document. 
 
 ## Mouse Hover
 
-TODO
+When the writer hovers the mouse cursor over certain locations, a [`textDocument/hover`](https://microsoft.github.io/language-server-protocol/specification#textDocument_hover) request is sent from the client to the server. The server computes related information about the requested location and returns it to the client, which in turn typically displays it as a tooltip. This can be used for, e.g., showing the definition given a word, among other uses.

@@ -4,6 +4,7 @@ title: Home
 nav_order: 1
 description: "TEASPN: Framework and Protocol for Integrated Writing Assistance Environments"
 permalink: /
+image: logo.png
 ---
 
 ![TEASPN logo](logo.png)
@@ -11,7 +12,7 @@ permalink: /
 Framework and Protocol for Integrated Writing Assistance Environments
 {: .fs-6 .fw-300 }
 
-[Get started now](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub](https://github.com/pmarsceill/just-the-docs){: .btn .fs-5 .mb-4 .mb-md-0 }
+[Specification]({{ site.baseurl }}{% link docs/specification.md %}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View SDK on GitHub](https://github.com/teaspn/teaspn){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
@@ -45,7 +46,9 @@ We provide the TEASPN SDK.
 
 ## About the project
 
-The TEASPN project is led by [Masato Hagiwara](http://masatohagiwara.net/) (Octanove Labs, RIKEN AIP), [Takumi Ito](#) and [Tatsuki Kuribayashi](https://kuribayashi4.github.io/) (Langsmith Inc., Tohoku University).
+&copy; 2019 TEASPN developers
+
+The TEASPN project is led by [Masato Hagiwara](http://masatohagiwara.net/) ([Octanove Labs](http://www.octanove.com/), [RIKEN AIP](http://www.riken.jp/en/research/labs/aip/)), [Takumi Ito](#) and [Tatsuki Kuribayashi](https://kuribayashi4.github.io/) ([Langsmith Inc.](https://langsmith.co.jp/), [Tohoku University](https://www.nlp.ecei.tohoku.ac.jp/)). We also thank Prof Jun Suzuki and Prof Kentaro Inui at Tohoku University for their support of this project.
 
 ## License
 
