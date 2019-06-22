@@ -10,6 +10,9 @@ aux_links:
   "See TEASPN on GitHub":
     - "//github.com/teaspn/teaspn"
 
+# Google Analytics Tracking
+ga_tracking: UA-175204-21
+
 plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
