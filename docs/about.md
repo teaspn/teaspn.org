@@ -15,3 +15,11 @@ The TEASPN project is led by [Masato Hagiwara](http://masatohagiwara.net/) ([Oct
 The documentation for TEASPN is licensed under [the Creative Commons Attribution 4.0 International (CC BY 4.0) License](https://creativecommons.org/licenses/by/4.0/). The TEASPN SDK code is available under the MIT License.
 
 ## Contributing
+
+Feel free to submit issues and pull requests to [the website repo](https://github.com/teaspn/teaspn.org) if you have feedback or improvements on the protocol itself. Feedback on [the SDK](https://github.com/teaspn/teaspn-sdk) is also welcome!
+
+If you implement your TEASPN clients or servers, do let us know! We'd love to know how you use TEASPN :)
+
+## Contact
+
+Reach us at [contact@teaspn.org](mailto:contact@teaspn.org).

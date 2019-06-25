@@ -12,7 +12,7 @@ image: logo.png
 Framework and Protocol for Integrated Writing Assistance Environments
 {: .fs-6 .fw-300 }
 
-[Specification]({{ site.baseurl }}{% link docs/specification.md %}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View SDK on GitHub](https://github.com/teaspn/teaspn){: .btn .fs-5 .mb-4 .mb-md-0 }
+[Specification]({{ site.baseurl }}{% link docs/specification.md %}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View SDK on GitHub](https://github.com/teaspn/teaspn-sdk){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
@@ -42,7 +42,7 @@ For the details, please refer to the [specification page]({{ site.baseurl }}{% l
 
 ## TEASPN SDK (Software Development Kit)
 
-We provide the TEASPN SDK.
+We provide the TEASPN SDK. See [the Github repository](https://github.com/teaspn/teaspn-sdk) for more details.
 
 ## About the project
 

@@ -6,4 +6,4 @@ description: "TEASPN: Framework and Protocol for Integrated Writing Assistance E
 permalink: /implementations
 ---
 
-lorem ipsum
+We provide [the official TEASPN SDK](https://github.com/teaspn/teaspn-sdk) for supporting development of TEASPN clients and servers.
