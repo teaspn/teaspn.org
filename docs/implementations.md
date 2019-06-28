@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Implementations
-nav_order: 3
+nav_order: 4
 description: "TEASPN: Framework and Protocol for Integrated Writing Assistance Environments"
 permalink: /implementations
 ---

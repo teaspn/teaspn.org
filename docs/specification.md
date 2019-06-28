@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Specification
-nav_order: 2
+nav_order: 3
 description: "TEASPN: Framework and Protocol for Integrated Writing Assistance Environments"
 permalink: /specification
 image: logo.png
