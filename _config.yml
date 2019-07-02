@@ -13,6 +13,9 @@ aux_links:
 # Google Analytics Tracking
 ga_tracking: UA-175204-21
 
+twitter:
+  card: summary
+
 plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
