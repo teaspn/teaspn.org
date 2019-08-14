@@ -8,7 +8,7 @@ search_enabled: true
 
 aux_links:
   "See TEASPN on GitHub":
-    - "//github.com/teaspn/teaspn"
+    - "//github.com/teaspn/teaspn-sdk"
 
 # Google Analytics Tracking
 ga_tracking: UA-175204-21
