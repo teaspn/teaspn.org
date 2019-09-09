@@ -8,7 +8,7 @@ permalink: /about
 
 ## About the project
 
-The TEASPN project is led by [Masato Hagiwara](http://masatohagiwara.net/) ([Octanove Labs](http://www.octanove.com/), [RIKEN AIP](http://www.riken.jp/en/research/labs/aip/)), [Takumi Ito](https://www.takumi-ito.com/) and [Tatsuki Kuribayashi](https://kuribayashi4.github.io/) ([Langsmith Inc.](https://langsmith.co.jp/), [Tohoku University](https://www.nlp.ecei.tohoku.ac.jp/)). We also thank [Prof Jun Suzuki](http://www.cl.ecei.tohoku.ac.jp/~jun/) and [Prof Kentaro Inui](http://www.cl.ecei.tohoku.ac.jp/~inui/) at Tohoku University for their support of this project.
+The TEASPN project is led by [Masato Hagiwara](http://masatohagiwara.net/) ([Octanove Labs](http://www.octanove.com/), [RIKEN AIP](http://www.riken.jp/en/research/labs/aip/)), [Takumi Ito](https://www.takumi-ito.com/) and [Tatsuki Kuribayashi](https://kuribayashi4.github.io/) ([Langsmith Inc.](https://langsmith.co.jp/), [Tohoku University](https://www.nlp.ecei.tohoku.ac.jp/)). We also thank [Prof Jun Suzuki](http://www.cl.ecei.tohoku.ac.jp/~jun/) and [Prof Kentaro Inui](http://www.cl.ecei.tohoku.ac.jp/~inui/) at Tohoku University and RIKEN AIP for their support of this project.
 
 ## License
 

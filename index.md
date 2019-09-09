@@ -20,6 +20,8 @@ Framework and Protocol for Integrated Writing Assistance Environments
 
 TEASPN (Text Editing Assistance Smartness Protocol for Natural Language; pronounced "teaspoon") is a protocol and a framework for providing integrated writing assistance environments. It defines a set of APIs that writing software (e.g., text editors) uses to communicate with language smartness providers (e.g., grammatical error correction systems).
 
+For more details of TEASPN, please refer to [our EMNLP 2019 system demonstrations paper](https://arxiv.org/abs/1909.02621).
+
 ## Why TEASPN?
 
 ![TEASPN overview](overview.png)
