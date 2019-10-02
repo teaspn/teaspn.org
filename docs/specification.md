@@ -11,7 +11,7 @@ image: logo.png
 
 ## Overview
 
-We mentioned on the [home page]({{ site.baseurl }}{% link index.md %}), TEASPN is a fork of [Language Server Protocol (LSP)](https://microsoft.github.io/language-server-protocol/) and shares a large potion of its specification with LSP. Both TEASPN and LSP are based on an HTTP-like base protocol which contains the header and the content parts. The content part follows [JSON-PRC](https://www.jsonrpc.org/) for serializing messages. A message can be one of request, response, or notification.
+We mentioned on the [home page]({{ site.baseurl }}{% link index.md %}), TEASPN is a fork of [Language Server Protocol (LSP)](https://microsoft.github.io/language-server-protocol/) and shares a large potion of its specification with LSP. Both TEASPN and LSP are based on an HTTP-like base protocol which contains the header and the content parts. The content part follows [JSON-RPC](https://www.jsonrpc.org/) for serializing messages. A message can be one of request, response, or notification.
 
 ## Text Synchronization
 
